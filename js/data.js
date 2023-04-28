@@ -1,59 +1,66 @@
 const qnaList = [
     {
-      q: '1. 당신이 아이스크림 가게에 갔을 때, 어떤 맛을 먼저 시도해보시나요?',
+      q: '1. 아이스크림 가게에 들어갔다... 어떤맛을 골라야 하지?',
       a: [
-        { answer: 'a. 달달한게 최고지', type: ['cow', 'tiger', 'dragon', 'chick'] },
-        { answer: 'b. 상큼한게 나아', type: ['mouse', 'rabbit', 'horse', 'snake', 'dog', 'monkey'] },
+        { answer: 'a. 어떤게 제일 인기가 많아요?', type: ['ESFJ','ESTP'] },
+        { answer: 'b. 오... 새로운 맛이 나왔네? 한번 먹어볼까?', type: ['ENFP','ENTP'] },
+        {answer: 'c. 내가 좋아하는 맛만 먹을래...', type: ['ISTJ','ISFJ']},
       ]
     },
     {
       q: '2. 당신이 아이스크림을 먹을 때, 어떤 방법으로 먹는 것을 선호하시나요? ',
       a: [
-        { answer: 'a. 한 번에 크게 먹는다.', type: ['mouse', 'rabbit', 'tiger', 'monkey'] },
-        { answer: 'b. 작게 먹어서 여러 번 즐긴다.', type: ['cow', 'horse', 'snake', 'dog'] },
+        { answer: 'a. 차가운 아이스크림을 먹을때도 빠르게 먹는편', type: ['ISTP', 'ESTP'] },
+        { answer: 'b. 천천히 즐기며 아이스크림을 녹이는 것을 좋아하는편', type: ['INFP', 'INFJ'] },
+        { answer: 'c. 다양한 맛을 한번에 즐기기 위해 섞어먹는편 ', type: ['ENTP','ENTJ'] },
       ]
     },
     {
       q: '3. 아이스크림을 살 때, 어떤 기준으로 선택하시나요?',
       a: [
-        { answer: 'a. 자신이 항상 먹던 맛을 선택한다', type: ['cow', 'rabbit', 'tiger', 'dog', 'monkey'] },
-        { answer: 'b. 새로운 맛을 시도해보고 싶다', type: ['sheep', 'chick', 'pig'] },
+        { answer: 'a. 눈에 띄는 디자인이나 포장으로 선택한다', type: ['ESFP','ENFP'] },
+        { answer: 'b. 내가 좋아하는 아이스크림!', type: ['INTP','ENTP'] },
+        { answer: 'c. 가격을 고려하며 선택한다', type: ['ISTJ','INTJ'] },
       ]
     },
     {
-      q: '당신이 좋아하는 아이스크림의 맛은 무엇인가요?',
+      q: '4. 당신이 좋아하는 아이스크림의 맛은 무엇인가요?',
       a: [
-        { answer: 'a. 부드러운 맛', type: ['cow', 'tiger', 'dragon' ] },
-        { answer: 'b. 진한 맛" ', type: ['sheep', 'dog', 'monkey', 'chick', 'pig' ] },
+        { answer: 'a. 달콤하고 부드러운 맛', type: ['ESFP', 'ENFP' ] },
+        { answer: 'b. 시원하고 청량한 과일 맛" ', type: ['ESTP', 'ESFP'] },
+        { answer: 'c. 진한 초콜릿이나 커피맛. ', type: ['INTJ','ISTJ'] },
+        { answer: 'd. 부드러운 바닐라나 크림 맛', type: ['ISFJ','INFJ'] },
       ]
     },
     {
       q: '5. 아이스크림을 먹을 때, 어떤 분위기에서 먹는 것을 좋아하시나요?',
       a: [
-        { answer: 'a. 혼자 조용히 먹는 것을 좋아한다', type: ['cow', 'sheep', 'dog', 'dragon', 'chick' ] },
-        { answer: 'b. 함께하는 분위기에서 먹는 것을 좋아한다', type: ['mouse', 'rabbit', 'horse', 'pig']},
+        { answer: 'a. 혼자 조용히 먹는 것을 좋아한다', type: ['ESFJ', 'ENFJ' ] },
+        { answer: 'b. 함께하는 분위기에서 먹는 것을 좋아한다', type: ['INFP','INFJ']},
+        { answer: 'c. 분위기는 크게 상관하지 않는다', type: ['ISTP','ESTP']},
       ]
     },
   
     {
       q: '6. 아이스크림을 먹을 때, 어떤 장소에서 먹는 것을 선호하시나요?',
       a: [
-        { answer: 'a. 야외에서 먹는 것을 좋아한다', type: ['dragon', 'chick', 'pig' ] },
-        { answer: 'b. 실내에서 먹는 것을 좋아한다', type: ['mouse', 'rabbit', 'horse', 'dog' ] },
+        { answer: 'a. 야외에서 먹는 것을 좋아한다', type: ['ESFJ','ESFP','ISFJ','ISFP','ESTJ','ISTJ','ESTP','ISTP'] },
+        { answer: 'b. 실내에서 먹는 것을 좋아한다', type: ['ENFJ','ENFP','INFJ','INFP','ENTJ','INTJ','ENTP','INTP'] },
       ]
     },
     {
-      q: '7. 아이스크림 가게에서 가장 먼저 눈에 띄는 것은 무엇인가요',
+      q: '7. 아이스크림을 먹을때, 다른사람이 먹는것에 관심이 있나요? ',
       a: [
-        { answer: 'a. 색상이 밝은 아이스크림', type: ['cow', 'sheep', 'pig' ] },
-        { answer: 'b. 독특한 맛의 아이스크림', type: ['tiger', 'dragon', 'chick' ] },
+        { answer: 'a. 그 맛 맛있어?? 나도 한입만', type: ['ENFJ','ESFJ' ] },
+        { answer: 'b. 굳이 궁금하지는 않네...', type: ['ISTP','INTJ' ] },
+        { answer: 'c. 너가 먼저 먹어봐! 맛있으면 나도 그거 먹어볼래!', type: ['ESTP','ESFP']},
       ]
     },
     {
       q: '8. 아이스크림을 먹을 때, 어떤 식감을 좋아하시나요',
       a: [
-        { answer: 'a. 부드럽고 부드러운 식감.', type: ['mouse', 'dragon', 'chick' ] },
-        { answer: 'b. 쫄깃하고 진한 식감.', type: ['rabbit', 'tiger', 'horse', 'snake', 'dog', 'monkey' ] },
+        { answer: 'a. 부드럽고 잘녹는 식감.', type: ['ESFJ','ESFP','ENFJ','ENFP','ISFJ','ISFP','INFP','INFJ' ] },
+        { answer: 'b. 쫄깃하고 진한 식감.', type: ['ESTJ', 'ISTJ', 'ENTJ', 'INTJ', 'ESTP', 'ISTP','ENTP','INTP' ] },
       ]
     },
   ]
@@ -119,4 +126,25 @@ const qnaList = [
       name: '민트 초콜릿 아이스크림',
       desc: '이 유형은 신중하고 조직적이며, 실용적인 방식으로 일을 처리하는 것을 선호합니다. 그들은 목표 달성을 위해 계획을 세우며, 집중력이 강하고, 규칙을 따르는 것을 좋아합니다. 민트 초콜릿 아이스크림은 청량감과 진한 초콜릿 맛이 조화롭게 어우러진 맛으로, 이 유형의 신중하고 조직적인 성격과 철저함을 나타냅니다'
     },
+    {
+      //ESTJ - 라즈베리 세베리 아이스크림
+    name: '라즈베리 세베리 아이스크림',
+    desc: '이 유형은 명확하고 체계적으로 생각하는 유형으로, 라즈베리의 상큼한 맛과 세베리의 달콤한 맛이 조화를 이루는 라즈베리 세베리 아이스크림과 같습니다. 단순하지만 깔끔하고 체계적인 스타일입니다'
+    },
+    {
+      //ESTP - 피스타치오 아이스크림
+    name: '피스타치오 아이스크림',
+    desc: '이 유형은 탐색적인 성격으로, 독특하고 다양한 맛을 즐기는 유형입니다. 피스타치오의 고소하고 특이한 맛과 질감이 돋보이는 피스타치오 아이스크림과 같습니다. 토핑이나 시럽 등으로 아이스크림에 추가적인 맛을 더할 수도 있습니다.'
+    },
+    {
+      //ESFP - 팥빙수
+    name: '팥빙수',
+    desc: '팥빙수는 다채로운 재료들이 함께 어우러져 매우 화려한 모습을 띠고 있으며, 색다른 경험을 추구하는 당신과 잘 어울립니다. 또한, 각양각색의 토핑들이 맛을 더해줌으로써, 색다른 경험과 다양성을 즐기는 당신의 입맛을 자극한다. 팥빙수는 여러 가지 맛과 향을 즐길 수 있어, 새로운 것을 시도하는 것을 좋아하는 당신에게 적합한 아이스크림입니다.'
+    },
+    {
+      //ESFJ - 카라멜 아이스크림
+    name: '카라멜 아이스크림',
+    desc: '달콤하고 부드러운 카라멜 아이스크림은 다양한 상황에서 사람들을 묶어주는 당신의 성향과 잘 어울립니다. 부드러운 맛과 고소한 향으로 누구에게나 사랑받는 당신! 카라멜 아이스크림은 달콤하면서도 깔끔한 맛으로 상황에 따라서는 매우 화기애애한 분위기를 연출시키는 당신은 마치 카라멜 아이스크림 같네요!'
+    },
+
   ]
