@@ -8,21 +8,21 @@ const select = [];
 function calResult(){
     var pointArray = [
         {name: 'INFJ', value: 0, key: 0},
-        {name: 'INFP', value: 0, key: 1},
-        {name: 'INTJ', value: 0, key: 2},
+        {name: 'INTJ', value: 0, key: 1},
+        {name: 'INFP', value: 0, key: 2},
         {name: 'INTP', value: 0, key: 3},
-        {name: 'ISFJ', value: 0, key: 4},
-        {name: 'ISFP', value: 0, key: 5},
-        {name: 'ISTJ', value: 0, key: 6},
-        {name: 'ISTP', value: 0, key: 7},
-        {name: 'ENFJ', value: 0, key: 8},
-        {name: 'ENFP', value: 0, key: 9},
-        {name: 'ENTJ', value: 0, key: 10},
-        {name: 'ENTP', value: 0, key: 11},
-        {name: 'ESFJ', value: 0, key: 12},
-        {name: 'ESFP', value: 0, key: 13},
-        {name: 'ESTJ', value: 0, key: 14},
-        {name: 'ESTP', value: 0, key: 15},
+        {name: 'ENFJ', value: 0, key: 4},
+        {name: 'ENFP', value: 0, key: 5},
+        {name: 'ENTJ', value: 0, key: 6},
+        {name: 'ENTP', value: 0, key: 7},
+        {name: 'ISFJ', value: 0, key: 8},
+        {name: 'ISFP', value: 0, key: 9},
+        {name: 'ISTP', value: 0, key: 10},
+        {name: 'ISTJ', value: 0, key: 11},
+        {name: 'ESTJ', value: 0, key: 12},
+        {name: 'ESTP', value: 0, key: 13},
+        {name: 'ESFP', value: 0, key: 14},
+        {name: 'ESFJ', value: 0, key: 15},
     ]
 
     for(let i = 0 ; i<endpoint; i++){
@@ -46,7 +46,25 @@ function calResult(){
     });
     console.log(resultArray);
     let resultword = resultArray[0].key;
+    console.log(resultword);
     return resultword;
+}
+
+function setResult(){
+    let point = calResult();
+    const resultName = document.querySelector('.resultname');
+    resultName.innerHTML = infoList[point].name;
+
+    var resultImg = document.createElement('img');
+    const imgDiv = document.querySelector('#resultImg');
+    var imgURL = 'img/image'+point+'.png';
+    resultImg.src = imgURL;
+    resultImg.alt = point;
+    resultImg.classList.add('img-fluid');
+    imgDiv.appendChild(resultImg);
+
+    const resultDesc = document.querySelector('.resultDesc');
+    resultDesc.innerHTML = infoList[point].desc;
 }
 
 function goResult(){
@@ -61,7 +79,7 @@ function goResult(){
          result.style.display = "block";
      },450)
      console.log(select);
-     calResult();
+     setResult();
 })}
 function addAnswer(answerText,qIdx, idx){
     var a = document.querySelector('.answerBox');
