@@ -20,63 +20,20 @@
     <body>
         <div class="container">
             <section id="main" class="mx-auto my-5 py-5 px-3">
-                <h2>나는 무슨 아이스크림일까?</h2>
-                <h5>아이스크림 테스트&#x1F367;</h5>
+                <h2>나는 무슨 마카롱일까?</h2>
+                <h5>마카롱 테스트&#x1F367;</h5>
                 <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
 
-                   <!-- <img src="./img/icecreamcart.png" alt="mainImage" class="img-fluid">-->
-                   <canvas id="canvas" width="300" height="300" class="img-fluid"></canvas>
-                   <script type="importmap">
-                       {
-                           "imports": {
-                             "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
-                             "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
-                           }
-                         }
-                   </script>
-                   <script type="module">
-                       import {GLTFLoader} from 'GLTFLoader';
-                       import * as THREE from 'three';
-           
-                       let scene = new THREE.Scene();
-                       let renderer = new THREE.WebGLRenderer({
-                           canvas: document.querySelector('#canvas'),
-                           antialias: true //For smoother graphics
-                       });
-                       renderer.outputEncoding = THREE.sRGBEncoding;
-                       /*
-                       Location
-                       */
-                       let camera = new THREE.PerspectiveCamera(15,1);
-                       camera.position.set(0,0,7)
-           
-                       scene.background = new THREE.Color('whitesmoke');
-                       let light = new THREE.DirectionalLight(0xffff00,10);
-                       scene.add(light);
-           
-           
-                       let loader = new GLTFLoader();
-                       loader.load('ice_cream/scene.gltf', function(gltf){
-                           scene.add(gltf.scene);
-                           renderer.render(scene,camera);
-                           function animate(){
-                               requestAnimationFrame(animate)
-                               gltf.scene.rotation.y += 0.04
-                               renderer.render(scene,camera);
-                           }
-                           animate()
-                       });
-           
-                       
-                   </script>
+                    <img src="./img/macaron.jpg" alt="mainImage" class="img-fluid">
+                   
                 </div>
                
                 <p>
-                    나만의 아이스크림를 찾아보세요! <br>
+                    나만의 마카롱를 찾아보세요! <br>
                     아래 시작하기 버튼을 눌러 시작해 주세요<br>
 
                 </p>
-                <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">시작하기</button>
+                <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">> 나만의 마카롱 찾기</button>
             </section>
             <section id="qna">
                 <div class="status mx-auto mt-5">
